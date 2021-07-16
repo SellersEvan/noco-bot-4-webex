@@ -29,7 +29,6 @@ class BotResponse {
      *  @param botFile { String } directory of the yaml bot config file
      */
     constructor( botFile ) {
-        console.log( botFile )
         this.configFile = this.getConfigFile( botFile );
         this.responses  = this.loadResponses();
         this.matchRegex = this.generateMatchArrayRegrex();
