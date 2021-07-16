@@ -12,11 +12,10 @@
 
 const yaml = require( "js-yaml" );
 const fs   = require( "fs" );
-const FILE = "./token.yaml"
 
-exports.get = () => {
+exports.get = ( dir ) => {
     try {
-        let file = fs.readFileSync( FILE, "utf8" );
+        let file = fs.readFileSync( dir, "utf8" );
         return yaml.load( file )[ "bot-token" ];
     } catch ( e ) {
         console.error( e );
