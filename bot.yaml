@@ -1,0 +1,6 @@
+---
+version: 1.0.0
+response-fallback: Sorry $nickname, I did not understand that, could you say it again.
+responses:
+  - regrex: /(hi|hello)/ig
+    message: Hi $nickname, you used regrex match.
