@@ -2,7 +2,7 @@
 
 ```js
 // index.js
-(new (require( "./bin/Server" ))()).Init();
+(new (require( "noco-bot-4-webex" ))()).Init();
 ```
 
 ## Fixme
