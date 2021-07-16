@@ -46,8 +46,6 @@ class BotResponse {
      getConfigFile( botFile ) {
         try {
             let file = fs.readFileSync( botFile, "utf8" );
-            console.log( yaml.load( file ) )
-            console.log( "=============" )
             return yaml.load( file );
         } catch ( e ) {
             console.error( e );
