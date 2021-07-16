@@ -1,5 +1,6 @@
 ---
 version: 1.0.0
+response-startup: Hi $nickname. Hope your having a great day!
 response-fallback: Sorry $nickname, I did not understand that, could you say it again.
 responses:
   - regrex: /(hi|hello)/ig

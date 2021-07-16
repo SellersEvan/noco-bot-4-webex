@@ -12,8 +12,8 @@
 
 const yaml    = require( "js-yaml" );
 const fs      = require( "fs" );
-const FILE    = "./bot.yaml"
 const VERSION = "v1.0.0"
+
 
 /** Usage
  *  let bot = new BotResponse()
@@ -26,21 +26,29 @@ class BotResponse {
 
     /** Constructor
      *  Load the yaml config file and generate the match array
+     *  @param botFile { String } directory of the yaml bot config file
      */
-    constructor() {
-        this.configFile = this.getConfigFile();
-        this.fallback   = this.fallBackMessage();
-        this.responses  = this.loadBotFile();
+    constructor( botFile ) {
+        console.log( botFile )
+        this.configFile = this.getConfigFile( botFile );
+        this.responses  = this.loadResponses();
         this.matchRegex = this.generateMatchArrayRegrex();
+
+        this.FALLBACK_MESSAGE  = this.loadFallbackMessage();
+        this.STARTUP_MESSAGE   = this.loadStartupMessage();
     }
+
 
     /** Get Config File
      *  Will load the file from bot.yaml
+     *  @param botFile { String } locate the yaml file for the bot
      *  @returns { obj } of config files or false if failed
      */
-     getConfigFile() {
+     getConfigFile( botFile ) {
         try {
-            let file = fs.readFileSync( FILE, "utf8" );
+            let file = fs.readFileSync( botFile, "utf8" );
+            console.log( yaml.load( file ) )
+            console.log( "=============" )
             return yaml.load( file );
         } catch ( e ) {
             console.error( e );
@@ -48,11 +56,12 @@ class BotResponse {
         }
     }
 
+
     /** Load Bot File
      *  Will load the file from bot.yaml
      *  @returns { obj } of all responses or false if failed
      */
-    loadBotFile() {
+    loadResponses() {
         return this.configFile[ "responses" ];
     }
 
@@ -62,8 +71,17 @@ class BotResponse {
      *  there is an error processing.
      *  @returns { String } of all responses or false if failed
      */
-    fallBackMessage() {
+    loadFallbackMessage() {
         return this.configFile[ "response-fallback" ];
+    }
+
+
+    /** Startup Message
+     *  Will load the file from bot.yaml, the message when bot is connected
+     *  @returns { String } of all responses or false if failed
+     */
+    loadStartupMessage() {
+        return this.configFile[ "response-startup" ];
     }
 
 
@@ -112,7 +130,7 @@ class BotResponse {
         }
 
         let responseIndex = this.match( str );
-        if ( responseIndex == -1 ) return this.fallBackMessage;
+        if ( responseIndex == -1 ) return this.FALLBACK_MESSAGE;
         return this.responses[ responseIndex ][ "message" ];
     }
 

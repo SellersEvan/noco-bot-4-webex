@@ -1,0 +1,1 @@
+(new (require( "./bin/Server" ))()).Init();
