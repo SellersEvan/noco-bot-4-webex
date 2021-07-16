@@ -1,24 +1,24 @@
 {
-  "name": "noco-bot-4-webex",
-  "version": "1.0.0",
-  "description": "No Code Webex Bot Framework",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node example.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SellersEvan/nocode-webex-bot-framework.git"
-  },
-  "author": "Evan Sellers",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SellersEvan/nocode-webex-bot-framework/issues"
-  },
-  "homepage": "https://github.com/SellersEvan/nocode-webex-bot-framework#readme",
-  "dependencies": {
-    "js-yaml": "^4.1.0",
-    "webex-node-bot-framework": "^2.3.7"
-  }
+    "name": "noco-bot-4-webex",
+    "version": "1.0.0",
+    "description": "No Code Webex Bot Framework",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node example.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SellersEvan/nocode-webex-bot-framework.git"
+    },
+    "author": "Evan Sellers",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SellersEvan/nocode-webex-bot-framework/issues"
+    },
+    "homepage": "https://github.com/SellersEvan/nocode-webex-bot-framework#readme",
+    "dependencies": {
+        "js-yaml": "^4.1.0",
+        "webex-node-bot-framework": "^2.3.7"
+    }
 }
