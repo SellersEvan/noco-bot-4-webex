@@ -31,11 +31,11 @@ class Server {
 
         // Event Framework Users Joins
         this.Framework.on( "spawn", ( bot, id, addedBy ) => {
-            bot.say( "Bot Online" );
+            bot.say( this.BotRes.STARTUP_MESSAGE );
         });
 
         // Incoming Message
-        this.Framework.hears( /^./, this.messageProcess );
+        this.Framework.hears( /^./, ( bot, trigger ) => { this.messageProcess( bot, trigger ); } );
     }
 
 
@@ -47,7 +47,7 @@ class Server {
             nickname: trigger.person.nickName,
             created: trigger.message.created
         }
-        let response = BotRes.Process( payload[ "message" ] );
+        let response = this.BotRes.ProcessText( payload[ "message" ] );
             response = InlineVars.Process( response, payload );
         bot.say( response )
     }

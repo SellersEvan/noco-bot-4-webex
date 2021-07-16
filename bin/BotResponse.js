@@ -12,7 +12,7 @@
 
 const yaml    = require( "js-yaml" );
 const fs      = require( "fs" );
-const VERSION = "v1.0.0"
+const VERSION = "v1.0.1"
 
 
 /** Usage
@@ -119,9 +119,9 @@ class BotResponse {
     }
 
 
-    Process( str ) {
+    ProcessText( str ) {
         if ( str == "/bot" ) {
-            return `NoCode Bot ${ VERSION } by Evan Sellers.`
+            return `NoCode Bot for Webex (noco-bot-4-webex) ${ VERSION } by Evan Sellers.`
         } else if ( str == "/dev" ) {
             return JSON.stringify( this.configFile, null, 4 );
         }
