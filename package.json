@@ -1,6 +1,6 @@
 {
     "name": "noco-bot-4-webex",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "No Code Webex Bot Framework",
     "main": "index.js",
     "scripts": {

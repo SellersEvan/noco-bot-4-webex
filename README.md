@@ -44,13 +44,8 @@ responses:
 
 
 ## Fixme
-<<<<<<< Updated upstream
 - [ ] Allow inline varibles for startup message and error message
 - [ ] Allow inline code to be processes
 - [ ] Get version from package.json file for bot response 
-=======
-- Allow inline varibles for startup message and error message
-- Allow inline code to be processes
-- Get version from package.json file for bot response 
-- Fix documentation for server.js
->>>>>>> Stashed changes
+- [x] Fix documentation for server.js
+
