@@ -42,6 +42,8 @@ responses:
 | `$message` | Message Sent by User |
 | `$created` | When the message was sent |
 
+## Tips
+- To get a new line put two spaces before the new line inline as `\s\s\n` like `this is  \nA new line`.
 
 ## Fixme
 - [ ] Allow inline varibles for startup message and error message
