@@ -44,6 +44,7 @@ responses:
 
 ## Tips
 - To get a new line put two spaces before the new line inline as `\s\s\n` like `this is  \nA new line`.
+- do not use the `g` global flag for regrex
 
 ## Fixme
 - [ ] Allow inline varibles for startup message and error message

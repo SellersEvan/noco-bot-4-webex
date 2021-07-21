@@ -16,6 +16,7 @@ class Server {
             token: this.WebexToken,
             removeDeviceRegistrationsOnStart: true
         } );
+        this.framework.messageFormat = "markdown";
     }
 
 

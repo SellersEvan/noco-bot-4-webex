@@ -13,6 +13,7 @@
 const yaml    = require( "js-yaml" );
 const fs      = require( "fs" );
 const VERSION = "v1.0.3"
+const DEV_MODE = true;
 
 
 /** Usage
@@ -110,11 +111,12 @@ class BotResponse {
     match( str ) {
         let index = -1;
         this.matchRegex.forEach( regrex => {
-            if ( regrex[ "match" ].test( str ) ) {
+            if ( DEV_MODE )
+                console.log( "(" + regrex.index + "-" + regrex[ "match" ].test( str ) + ") " + regrex.match );
+            if ( regrex[ "match" ].test( str ) )
                 index = regrex.index;
-                return;
-            }
         });
+        if ( DEV_MODE ) console.log( str + "=>" + index );
         return index;
     }
 
