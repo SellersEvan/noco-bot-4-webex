@@ -12,7 +12,10 @@ class Server {
         this.ConfigBot  = CONFIG_BOT;
         this.WebexToken = TokenLoader.get( CONFIG_TOKEN )
         this.BotRes     = new BotResponse( this.ConfigBot );
-        this.Framework  = new Framework( { token: this.WebexToken } );
+        this.Framework  = new Framework( {
+            token: this.WebexToken,
+            removeDeviceRegistrationsOnStart: true
+        } );
     }
 
 
