@@ -1,7 +1,10 @@
----
 version: 1.0.0
-response-startup: Hi $nickname. Hope your having a great day!
+response-startup: Hi $nickname. Hope your having a great day! My name is Cisco Resource Finder.
 response-fallback: Sorry $nickname, I did not understand that, could you say it again.
 responses:
-  - regrex: /(hi|hello)/ig
-    message: Hi $nickname, you used regrex match.
+  - regrex: /([a-z]{0,})(hi|hello|morning|afternoon)([a-z]{0,})/i
+    message: Hi $nickname, it's nice to meet you! Welcome to Cisco Resource Finder.
+  - regrex: /([a-z]{0,})(goodbye|bye|night|nite)([a-z]{0,})/i
+    message: Bye $nickname, see you soon.
+  - regrex: /(([a-z]{0,})(you're|youre|your|you|name)([a-z]{0,})){1,}/i
+    message: My name is NOCO Bot.
