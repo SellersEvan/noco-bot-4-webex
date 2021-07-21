@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
-## [1.0.2]
+## [1.0.3]
+### Updated
 - Webex bot added new feature to remove device on startup to prevent too many device from being connected *(2021-07-21)*
 - updated documentation
 

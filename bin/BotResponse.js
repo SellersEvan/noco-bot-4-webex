@@ -12,7 +12,7 @@
 
 const yaml    = require( "js-yaml" );
 const fs      = require( "fs" );
-const VERSION = "v1.0.2"
+const VERSION = "v1.0.3"
 
 
 /** Usage
