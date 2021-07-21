@@ -47,6 +47,7 @@ responses:
 - do not use the `g` global flag for regrex
 
 ## Fixme
+- [ ] add clear method
 - [ ] Allow inline varibles for startup message and error message
 - [ ] Allow inline code to be processes
 - [ ] Get version from package.json file for bot response 
